@@ -55,4 +55,4 @@ def hello_world(syms):
 
 
 if __name__ == '__main__':
-    app.run()
+    aapp.run(port=12345, debug=True)
