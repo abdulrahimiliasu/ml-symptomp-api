@@ -35,16 +35,15 @@ def predictDisease(symptoms):
     }
     return predictions
 
-
-# Testing the function
-# print(predictDisease("Itching,Skin Rash,Nodal Skin Eruptions,Dischromic Patches"))
-
-
 app = Flask(__name__)
 
 # Itching&Skin_Rash&Nodal_Skin_Eruptions&Dischromic_Patches
 
-@app.route('/<syms>')
+@app.route('/')
+def hello():
+    return "Symptom API"
+
+@app.route('/predict/<syms>')
 def hello_world(syms):
     ss = syms.split("&")
     s = ""
