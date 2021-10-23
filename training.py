@@ -13,7 +13,7 @@ import json
 
 def train():
 
-	DATA_PATH = "/Users/abdulrahimiliasu/Downloads/mlSymptomApi/Training.csv"
+	DATA_PATH = "/Training.csv"
 	data = pd.read_csv(DATA_PATH).dropna(axis = 1)
 
 	disease_counts = data["prognosis"].value_counts()
@@ -97,7 +97,7 @@ def train():
 	final_nb_model.fit(X, y)
 	final_rf_model.fit(X, y)
 
-	test_data = pd.read_csv("/Users/abdulrahimiliasu/Downloads/mlSymptomApi/Testing.csv").dropna(axis=1)
+	test_data = pd.read_csv("/Testing.csv").dropna(axis=1)
 
 	test_X = test_data.iloc[:, :-1]
 	test_Y = encoder.transform(test_data.iloc[:, -1])

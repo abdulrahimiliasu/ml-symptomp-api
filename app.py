@@ -37,7 +37,7 @@ def predictDisease(symptoms):
 
 
 # Testing the function
-print(predictDisease("Itching,Skin Rash,Nodal Skin Eruptions,Dischromic Patches"))
+# print(predictDisease("Itching,Skin Rash,Nodal Skin Eruptions,Dischromic Patches"))
 
 
 app = Flask(__name__)
